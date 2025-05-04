@@ -14,6 +14,10 @@ app.get('/about', (req, res) => {
     res.send('About Page - Todo App');
 });
 
+// Home route changes
+app.get('/new', (req, res) => {
+    res.send('Hello from Feature Branch 1!');
+});
 
 // Home route
 app.get('/', (req, res) => {
