@@ -17,8 +17,12 @@ jobs:
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Login to AWS ECR
+      - name: Login to Amazon ECR
+        id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
+        with:
+          region: us-east-1
+      
 
       - name: Build, Tag, and Push Docker Image to ECR
         run: |
