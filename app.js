@@ -14,6 +14,13 @@ app.get('/about', (req, res) => {
     res.send('About Page - Todo App');
 });
 
+
+app.get('/work', (req, res) => {
+    res.send('The CI/Cd pipeline is working........');
+});
+
+
+
 // Home route
 app.get('/', (req, res) => {
     res.send('Todo API is running...');
