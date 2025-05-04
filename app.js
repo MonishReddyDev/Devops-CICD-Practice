@@ -11,7 +11,7 @@ app.use('/api/todos', todoRoutes);
 
 // Home route
 app.get('/', (req, res) => {
-    res.send('Todo API is running... Means Automation is working....');
+    res.send('Todo API is running...');
 });
 
 module.exports = app;
