@@ -1,12 +1,20 @@
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 
+// MongoDB Atlas connection URL
+const url = process.env.MONGO_URI
+
+// Create a connectDB function
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI);
-        console.log('MongoDB connected successfully.');
-    } catch (error) {
-        console.error('MongoDB connection failed:', error.message);
-        process.exit(1); // Exit process with failure
+        await mongoose.connect(url, {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+        });
+        console.log('MongoDB Connected');
+    } catch (err) {
+        console.error('MongoDB Connection Error:', err.message);
+        process.exit(1); // Stop the app if database connection fails
     }
 };
 
