@@ -9,7 +9,7 @@ dotenv.config();
 connectDB();
 
 // Start server
-const PORT = process.env.PORT || 5000;
+const PORT = 4000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
     console.log("Is the Automation working")
