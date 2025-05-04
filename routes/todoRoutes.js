@@ -3,10 +3,12 @@ const { getTodos, createTodo, updateTodo, deleteTodo } = require('../controllers
 
 const router = express.Router();
 
+//This is the Get and POST todo
 router.route('/')
     .get(getTodos)
     .post(createTodo);
 
+//This is the PUT and DELETE todo
 router.route('/:id')
     .put(updateTodo)
     .delete(deleteTodo);
